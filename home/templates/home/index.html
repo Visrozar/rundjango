@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html data-wf-page="59626c18a11e06264839d1f3" data-wf-site="593e296cbedace68bd410eb3">
+<head>
+  <meta charset="utf-8">
+  <title>MRC Track Aerial Dashboard</title>
+  <meta content="MRC Race Track Aerial Analysis" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  {% load staticfiles %}
+  <link href="{% static 'home/css/normalize.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'home/css/webflow.css' %}" rel="stylesheet" type="text/css">
+
+  <link href="{% static 'home/css/spectasensors.mrc.webflow.css' %}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+
+<!-- Google Anlytics --->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102588425-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
+</script>
+  <link href="{% static 'home/images/favicon.png' %}" rel="shortcut icon" type="image/x-icon">
+  <link href="{% static 'home/images/SpectaLogo_256px.png' %}" rel="apple-touch-icon">
+</head>
+<body class="spectapagefixedscroll">
+  <div class="header" id="header">
+    <div class="spectadashnav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+      <div class="navcontainer w-container"><a class="brand w-nav-brand" href="#"><img class="navlogo" height="35" src="{% static 'home/images/MRC.png' %}"></a>
+        <nav class="nav-menu-2 w-nav-menu" role="navigation"><a class="navlink w-nav-link w--current" >Home</a></nav>
+        <nav class="nav-menu-2 w-nav-menu" role="navigation"><a class="navlink w-nav-link w--current"  href="/logout">Logout</a></nav>
+        <div class="menu-button-2 w-nav-button">
+          <div class="icon w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+    <div class="navright w-clearfix"><img class="navrightlogo" src="{% static 'home/images/AALogoBlackLight_50Hpx.png' %}" height="35px"></div>
+  </div>
+  <div class="dashmain">
+    <div class="tracklist">
+      <a class="cardlinkblock w-inline-block" href="/mrc/mrcaerialCaulfield">
+        <div class="trackcard">
+          <div class="cardheader">
+            <div class="cardheaderimg"><img class="cardheaderimg" height="40" src="{% static 'home/images/caulfieldLogoCircleGrey_100.png' %}" width="40"></div>
+            <div class="cardheadertext">
+              <h3 class="cardheadertext">CAULFIELD</h3>
+            </div>
+          </div>
+          <div class="cardmedia"><img class="cardimage" src="{% static 'home/images/CaulfieldOrtho.jpg' %}" width="300"></div>
+          <div class="cardfooter">
+            <h4 class="heading-8"><span>Grass health index</span></h4>
+            <div class="text-block-3">Most Recent Flight | 30th June 2017</div>
+          </div>
+          <div class="cardaction w-clearfix">
+            <div class="cardfootertextblock">
+              <div class="cardfooteractiontext">VIEW RESULTS</div>
+            </div>
+            <div class="cardbuttoncircle"><img class="image-6" src="{% static 'home/images/arrowRightGrey_40px.png' %}" width="18"></div>
+          </div>
+        </div>
+      </a>
+      <a class="cardlinkblock w-inline-block" href="/mrc/mrcaerialMornington">
+        <div class="trackcard">
+          <div class="cardheader">
+            <div class="cardheaderimg"><img class="cardheaderimg" height="40" src="{% static 'home/images/morningtonLogoCircleGrey100.png' %}" width="40"></div>
+            <div class="cardheadertext">
+              <h3 class="cardheadertext">Mornington</h3>
+            </div>
+          </div>
+          <div class="cardmedia"><img class="cardimage" src="{% static 'home/images/morningtonAerial2.jpg' %}"></div>
+          <div class="cardfooter">
+            <h4 class="heading-8"><span>Grass health index</span></h4>
+            <div class="text-block-3">Most Recent Flight | 4th July 2017</div>
+          </div>
+          <div class="cardaction w-clearfix">
+            <div class="cardfootertextblock">
+              <div class="cardfooteractiontext">VIEW RESULTS</div>
+            </div>
+            <div class="cardbuttoncircle"><img class="image-6" src="{% static 'home/images/arrowRightGrey_40px.png' %}" width="18"></div>
+          </div>
+        </div>
+      </a>
+      <a class="cardlinkblock w-inline-block" href="/mrc/mrcaerialSandown">
+        <div class="trackcard">
+          <div class="cardheader">
+            <div class="cardheaderimg"><img class="cardheaderimg" height="40" src="{% static 'home/images/sandownLogoCircleGrey_100.png' %}" width="40"></div>
+            <div class="cardheadertext">
+              <h3 class="cardheadertext">Sandown</h3>
+            </div>
+          </div>
+          <div class="cardmedia"><img class="cardimage" src="{% static 'home/images/sandown-aerial-300W.jpg' %}"></div>
+          <div class="cardfooter">
+            <h4 class="heading-8"><span>Grass health index</span></h4>
+            <div class="text-block-3">Most Recent Flight | 30th June 2017</div>
+          </div>
+          <div class="cardaction w-clearfix">
+            <div class="cardfootertextblock">
+              <div class="cardfooteractiontext">VIEW RESULTS</div>
+            </div>
+            <div class="cardbuttoncircle"><img class="image-6" src="{% static 'home/images/arrowRightGrey_40px.png' %}" width="18"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="footer">
+      <div class="footerwrapper">
+        <div class="footerblock"><img height="21" src="{% static 'home/images/AALightBlueLogo_50Hpx.png' %}"></div>
+        <div class="footerblock"><a class="linklight" href="http://www.aerialanalytics.com.au">(C) Aerial Analytics Australia</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>
