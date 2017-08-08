@@ -16,12 +16,17 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <style>
+        .col-md-9{
+            width: 0px !important;
+        }
+    </style> -->
 
 </head>
 
 <body>
   <div class="container">
-    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-5 col-md-offset-4 col-sm-6 col-sm-offset-2">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Login</div>
@@ -30,13 +35,13 @@
                       {% if error_message %}
                       <p><strong>{{error_message}}</strong></p>
                       {% endif %}
-                        <form action="" method="post" id="signupform" class="form-horizontal" role="form">
+                        <form action="" method="post" id="signupform" class="form-horizontal" role="form" >
                             {% csrf_token %}
                             {% include 'home/form-template.html' %}
 
                             <div class="form-group">
 
-                                <div class="col-md-offset-3 col-md-9">
+                                <div class="col-md-offset-4 col-md-9">
                                     <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Login</button>
                                 </div>
                             </div>
