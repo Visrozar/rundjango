@@ -25,7 +25,7 @@ SECRET_KEY = '-844_0&gajhmpxn+=3kj5bq3kex%e)=%ftb!@v40+20e12t11w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [45.63.31.168:8080]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
