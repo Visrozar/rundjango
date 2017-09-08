@@ -34,9 +34,6 @@ class UserFormView(View):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
-        # if user is not None:
-        #     login(request, user)
-        #     return redirect('home:index')
 
         if user.groups.filter(name='mrc').exists():
             login(request, user)
