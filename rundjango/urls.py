@@ -7,5 +7,8 @@ urlpatterns = [
     url(r'^logout/$',  views.logout_template, name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'^mrc/', include('home.urls', namespace='home')),
+    url(r'^axe/', include('axe.urls', namespace='axe')),
+    url(r'^chief/', include('chief.urls', namespace='chief')),
+    url(r'^dell/', include('dell.urls', namespace='dell')),
     url(r'^$', views.index, name='index'),
 ]

@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
 
-# Create your views here.
 def index(request):
     if request.user.is_authenticated:
-        return render(request, 'home/index.html')
+        return render(request, str(request.user.groups.all()[0]) + '/index.html')
     return redirect('login')
 
 def mrcaerialSandown(request):
