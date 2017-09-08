@@ -1,6 +1,9 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from . import views
+from django.conf.urls import handler404
+
+handler404 = views.error404
 
 urlpatterns = [
     url(r'^login/$', views.UserFormView.as_view(), name='login'),

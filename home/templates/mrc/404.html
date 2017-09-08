@@ -71,7 +71,7 @@ body{
 	   <h1>404</h1>
 	    <p>Error occured! - File not Found</p>
   	      <div class="sub">
-	        <p><a href="#">Back</a></p>
+	        <p><a onclick="goBack()">Back</a></p>
 	      </div>
         </div>
 	</div>
@@ -79,5 +79,11 @@ body{
 	<div class="footer">
 	 Design by-<a href="http://w3layouts.com">W3Layouts</a>
 	</div>
+
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+		</script>
 	
 </body>

@@ -6,11 +6,10 @@ from django.contrib.auth.models import User, Group
 from django.template import RequestContext
 
 
-def handler404(request):
-    response = render_to_response('mrc/404.html', {},
-                              context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
+def error404(request):
+    if request.user.is_authenticated:
+        return render(request, 'mrc/404.html')
+    return redirect('login')
 
 def index(request):
     if request.user.is_authenticated:
