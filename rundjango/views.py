@@ -8,7 +8,7 @@ from django.template import RequestContext
 
 def error404(request):
     if request.user.is_authenticated:
-        return render(request, 'mrc/404.html')
+        return render(request, 'home/404.html')
     return redirect('login')
 
 def index(request):
@@ -22,7 +22,7 @@ def logout_template(request):
 
 class UserFormView(View):
     form_class = UserForm
-    template_name = 'mrc/login.html'
+    template_name = 'home/login.html'
 
     def get(self, request):
         form = self.form_class(None)
@@ -37,7 +37,7 @@ class UserFormView(View):
         if user is not None:
             if user.groups.filter(name='home').exists():
                 login(request, user)
-                return render(request,'mrc/index.html')
+                return redirect('home:index')
             elif user.groups.filter(name='axe').exists():
                 login(request, user)
                 return redirect('axe:index')
@@ -48,7 +48,7 @@ class UserFormView(View):
                 login(request, user)
                 return redirect('dell:index')
             else:
-                return render(request,'mrc/noCompany.html')
+                return render(request,'home/noCompany.html')
             
         else:
             return redirect('login')
