@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^axe/', include('axe.urls', namespace='axe')),
     url(r'^chief/', include('chief.urls', namespace='chief')),
     url(r'^dell/', include('dell.urls', namespace='dell')),
+    url(r'^poll/', include('poll.urls', namespace='poll')),
     url(r'^$', views.index, name='index'),
 ]

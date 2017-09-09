@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [u'app.aerialanalytics.com.au','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'poll.apps.PollConfig',
     'axe.apps.AxeConfig',
     'chief.apps.ChiefConfig',
     'dell.apps.DellConfig',

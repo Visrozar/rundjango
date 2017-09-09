@@ -47,6 +47,9 @@ class UserFormView(View):
             elif user.groups.filter(name='dell').exists():
                 login(request, user)
                 return redirect('dell:index')
+            elif user.groups.filter(name='poll').exists():
+                login(request, user)
+                return redirect('poll:index')
             else:
                 return render(request,'home/noCompany.html')
             
