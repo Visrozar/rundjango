@@ -34,20 +34,23 @@ class UserFormView(View):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
-
-        if user.groups.filter(name='home').exists():
-            login(request, user)
-            return render(request,'mrc/index.html')
-        elif user.groups.filter(name='axe').exists():
-            login(request, user)
-            return redirect('axe:index')
-        elif user.groups.filter(name='chief').exists():
-            login(request, user)
-            return redirect('chief:index')
-        elif user.groups.filter(name='dell').exists():
-            login(request, user)
-            return redirect('dell:index')
+        if user is not None:
+            if user.groups.filter(name='home').exists():
+                login(request, user)
+                return render(request,'mrc/index.html')
+            elif user.groups.filter(name='axe').exists():
+                login(request, user)
+                return redirect('axe:index')
+            elif user.groups.filter(name='chief').exists():
+                login(request, user)
+                return redirect('chief:index')
+            elif user.groups.filter(name='dell').exists():
+                login(request, user)
+                return redirect('dell:index')
+            else:
+                return render(request,'mrc/noCompany.html')
+            
         else:
-            return render(request,'mrc/noCompany.html')
+            return redirect('login')
 
         return render(request, self.template_name, {'form': form})
