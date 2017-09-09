@@ -13,7 +13,7 @@ def error404(request):
 
 def index(request):
     if request.user.is_authenticated:
-        return render(request, 'mrc/index.html')
+        return render(request, str(request.user.groups.all()[0]) + '/index.html')
     return redirect('login')
 
 def logout_template(request):
@@ -35,9 +35,9 @@ class UserFormView(View):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
 
-        if user.groups.filter(name='mrc').exists():
+        if user.groups.filter(name='home').exists():
             login(request, user)
-            return redirect('home:index')        
+            return render(request,'mrc/index.html')
         elif user.groups.filter(name='axe').exists():
             login(request, user)
             return redirect('axe:index')
