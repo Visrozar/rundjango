@@ -48,6 +48,6 @@ class UserFormView(View):
             login(request, user)
             return redirect('dell:index')
         else:
-            return redirect('login')
+            return render(request,'mrc/noCompany.html')
 
         return render(request, self.template_name, {'form': form})
