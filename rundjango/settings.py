@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-844_0&gajhmpxn+=3kj5bq3kex%e)=%ftb!@v40+20e12t11w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [u'app.aerialanalytics.com.au','127.0.0.1']
 
